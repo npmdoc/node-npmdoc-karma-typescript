@@ -1,4 +1,7 @@
-# api documentation for  [karma-typescript (v3.0.0)](https://github.com/monounity/karma-typescript#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-karma-typescript.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-karma-typescript) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-karma-typescript.svg)](https://travis-ci.org/npmdoc/node-npmdoc-karma-typescript)
+# npmdoc-karma-typescript
+
+#### basic api documentation for  [karma-typescript (v3.0.1)](https://github.com/monounity/karma-typescript#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-karma-typescript.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-karma-typescript) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-karma-typescript.svg)](https://travis-ci.org/npmdoc/node-npmdoc-karma-typescript)
+
 #### Simplifying running unit tests with coverage for Typescript projects.
 
 [![NPM](https://nodei.co/npm/karma-typescript.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/karma-typescript)
@@ -111,25 +114,33 @@
         "@types/karma": "^0.13.33",
         "@types/lodash": "^4.14.59",
         "@types/minimatch": "^2.0.29",
+        "@types/mock-require": "^1.3.3",
         "@types/node": "^7.0.5",
         "@types/pad": "^1.0.0",
+        "@types/sinon": "^2.1.2",
+        "@types/tape": "^4.2.29",
         "@types/tmp": "0.0.32",
         "cli-clear": "^1.0.4",
         "copy": "^0.3.0",
         "del": "^2.2.2",
         "eslint": "^3.4.0",
+        "faucet": "0.0.1",
         "gulp": "^3.9.1",
         "gulp-util": "^3.0.7",
+        "istanbul": "^1.1.0-alpha.1",
+        "mock-require": "^2.0.2",
+        "sinon": "^2.1.0",
+        "tape": "^4.6.3",
         "tslint": "^4.4.2",
         "tslint-eslint-rules": "^3.3.0",
         "typescript": "latest"
     },
     "directories": {},
     "dist": {
-        "shasum": "517abd4fa2e36fdab4f191975226b58e1de5a76a",
-        "tarball": "https://registry.npmjs.org/karma-typescript/-/karma-typescript-3.0.0.tgz"
+        "shasum": "64619473a68973773ec3132f96be06da7428427e",
+        "tarball": "https://registry.npmjs.org/karma-typescript/-/karma-typescript-3.0.1.tgz"
     },
-    "gitHead": "2b5f3a9f3ceb36aff97d3ea80ca42f134c1cf51b",
+    "gitHead": "ad276adc19e5722fd7185aa03cda166299dbc6e5",
     "homepage": "https://github.com/monounity/karma-typescript#readme",
     "keywords": [
         "angularjs",
@@ -174,10 +185,12 @@
         "build:watch": "tsc -w --rootDir ./src",
         "lint": "eslint ./lib/*.js && tslint --project tsconfig.json",
         "test": "./ci/run.sh",
+        "test:unit": "tape dist/**/*.spec.js | faucet",
         "test:unix": "./ci/install.sh && ./ci/run.sh",
         "test:windows": ".\\ci\\install.bat & .\\ci\\run.bat"
     },
-    "version": "3.0.0"
+    "version": "3.0.1",
+    "bin": {}
 }
 ```
 
